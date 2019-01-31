@@ -1,0 +1,89 @@
+﻿using System;
+
+namespace exercicio02
+{
+    class Program
+    {
+
+        // private int Codigo;
+        //public int Quantidade { get; private set; }
+        //public decimal ValorUnitario { get; private set; }
+
+        static void Main(string[] args)
+        {
+
+            // DECLARAÇÃO DE VARIÁVEIS 
+
+            string entrada = " ";
+            int codigo1;
+            int codigo2;
+            int quantidade1 = 0;
+            int quantidade2 = 0;
+            decimal valorUnitario1 = 0;
+            decimal valorUnitario2 = 0;
+
+
+            // ENTRADA DE DADOS DA PRIMEIRA PEÇA.
+
+            //Program peca1;
+            //peca1 = new Program();
+            Console.WriteLine(" Fazer a leitura dos dados de duas peças. ");
+            Console.WriteLine("Dados da primeira peça: ");
+
+            Console.Write("Informe o código da peça: ");
+            entrada = Console.ReadLine();
+            codigo1 = Convert.ToInt32(entrada);
+
+            Console.Write("Informe a quantidade de peças: ");
+            entrada = Console.ReadLine();
+            quantidade1 = Convert.ToInt32(entrada);
+
+            Console.Write("Informe o valor unitário da peça: ");
+            entrada = Console.ReadLine();
+            valorUnitario1 = Convert.ToDecimal(entrada);
+
+
+            // ENTRADA DE DADOS DA SEGUNDA PEÇA.
+
+            //Program peca2;
+            //peca2 = new Program();
+            Console.WriteLine("Dados da segunda peça: ");
+
+            Console.Write("Informe o código da peça: ");
+            entrada = Console.ReadLine();
+            codigo2 = Convert.ToInt32(entrada);
+
+            Console.Write("Informe a quantidade de peças: ");
+            entrada = Console.ReadLine();
+            quantidade2 = Convert.ToInt32(entrada);
+
+            Console.Write("Informe o valor unitário da peça: ");
+            entrada = Console.ReadLine();
+            valorUnitario2 = Convert.ToDecimal(entrada);
+
+            // CONVERSÃO ( INT TO DECIMAL)
+
+
+            decimal resultado1;
+            decimal resultado2;
+
+            decimal q1 = Convert.ToDecimal(quantidade1);
+            decimal q2 = Convert.ToDecimal(quantidade2);
+
+            resultado1 = q1 * valorUnitario1;
+            resultado2 = q2 * valorUnitario2;
+
+            // SAIDA (VALOR A PAGAR)
+
+            decimal valorPagar = 0;
+
+            valorPagar = resultado1 + resultado2;
+
+            Console.WriteLine(" VALOR A PAGAR R$ : " + valorPagar);
+
+            Console.ReadKey();
+
+
+        }
+    }
+}
